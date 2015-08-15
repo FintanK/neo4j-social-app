@@ -1,0 +1,50 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h2>User information</h2>
+
+    <p>{{ user.property('name') }} | {{ user.property('age') }}</p>
+    <p>{{ user.property('address') }} {{ user.property('country') }}</p>
+    <p >Gender: {{ user.property('gener') }}</p>
+    <hr/>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h4>User <span class="label label-info">{{ user.property('name') }}</span> follows :</h4>
+            <ul class="list-unstyled">
+                {% for follow in followed %}
+                    <li>
+                        {{ follow.property('name') }} ( {{ follow.property('age') }} {{ follow.property('country') }} )
+                        <form method="POST" action="{{ path('relationship_remove') }}">
+                            <input type="hidden" name="login" value="{{ user.property('name') }}"/>
+                            <input type="hidden" name="to_remove" value="{{ follow.property('name') }}"/>
+                            <button type="submit" class="btn btn-sm btn-warning">Remove relationship</button>
+                        </form>
+                        <hr/>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h4>Suggestions for user <span class="label label-info">{{ user.property('name') }}</span> </h4>
+            <ul class="list-unstyled">
+                {% for suggested in suggestions %}
+                    <li>
+                        {{ suggested.property('name') }} ( {{ suggested.property('age') }} {{ suggested.property('country') }} )
+                        <form method="POST" action="{{ path('relationship_create') }}">
+                            <input type="hidden" name="user" value="{{ user.property('name') }}"/>
+                            <input type="hidden" name="to_follow" value="{{ suggested.property('name') }}"/>
+                            <button type="submit" class="btn btn-success btn-sm">Follow</button>
+                        </form>
+                        <hr/>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+{% endblock %}

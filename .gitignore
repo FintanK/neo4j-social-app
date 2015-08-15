@@ -1,0 +1,7 @@
+.idea/
+vendor/
+assets/
+web/assets/*
+logs/*
+composer.phar
+composer.lock

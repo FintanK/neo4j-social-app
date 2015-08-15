@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <ul class="list-unstyled">
+        {% for user in users %}
+            <li>
+                <a href="{{ path('show_user', { name: user.property('name') }) }}">
+                    {{ user.property('name') }} {{ user.property('name') }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

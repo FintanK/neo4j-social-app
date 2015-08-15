@@ -1,0 +1,29 @@
+{
+  "name": "neo4j-social-app",
+  "type": "application",
+  "description": "An example of Neo4J with PHP for a social network app",
+  "keywords": [
+    "graph",
+    "neo4j",
+    "cypher",
+    "social"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fintan Kearney"
+    }
+  ],
+  "require": {
+    "silex/silex": "~1.1",
+    "twig/twig": ">=1.8,<2.0-dev",
+    "symfony/twig-bridge": "~2.3",
+    "neoxygen/neoclient": "~2.1.6"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "FintanK\\Neo4JSocialApp\\": "src"
+    }
+  }
+}

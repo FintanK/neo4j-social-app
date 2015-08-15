@@ -1,0 +1,19 @@
+{
+  "name": "Neo4jSocialApp",
+  "version": "0.0.0",
+  "authors": [
+    "Fintan Kearney"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
