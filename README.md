@@ -1,6 +1,9 @@
 Neo4 Social App
 
 A simple example of how a social app can use Neo4J to enhance features such as relationships.
+Built using PHP and Bower.
+
+In the root directory
 
 > curl -sS https://getcomposer.org/installer | php
 
@@ -8,6 +11,8 @@ Install Dependencies
 
 > bower install
 > composer install
+
+Note: Ensure that the Neo4j service is running.
 
 You will also obviously need to have Neo4J installed (These installation steps are for Ubuntu).
 
@@ -17,12 +22,11 @@ You will also obviously need to have Neo4J installed (These installation steps a
 > sudo apt-get update && sudo apt-get install neo4j
 > sudo service neo4j-service (stop|start|restart)
 
-You can then run a development server using PHP by running
+Import Seed Data
+
+> neo4j-shell -file seed.cql
+> neo4j-shell -file contraints.cql
+
+You can then run a development server using PHP by running the following in the /web directory or configuring your web server to point at the contained index.php file.
 
 > php -S localhost:8000
-
-
-TO DO
-
-Degrees of seperation logic on UI
-Tidy up UI

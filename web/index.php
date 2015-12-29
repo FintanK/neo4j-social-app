@@ -4,6 +4,10 @@ require_once __DIR__.'/../config/db.php';
 
 use Neoxygen\NeoClient\ClientBuilder;
 
+ini_set('error_reporting', -1);
+ini_set('display_errors', 1);
+ini_set('html_errors', 1); // I use this because I use xdebug.
+
 $app = new Silex\Application();
 
 $app['neo'] = $app->share(function(){

@@ -19,7 +19,6 @@
     "twig/twig": ">=1.8,<2.0-dev",
     "symfony/twig-bridge": "~2.3",
     "neoxygen/neoclient": "~2.1.6"
-
   },
   "autoload": {
     "psr-4": {
