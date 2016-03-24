@@ -3,6 +3,8 @@ Neo4 Social App
 A simple example of how a social app can use Neo4J to enhance features such as relationships.
 Built using PHP and Bower.
 
+![](http://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-logo-2015.png)
+
 In the root directory
 
 > curl -sS https://getcomposer.org/installer | php
